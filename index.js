@@ -4,7 +4,7 @@ var pg = require('pg');
 var bodyParser = require('body-parser');
 var connectionString = process.env.DATABASE_URL || 'postgres://localhost:5432/HF-portal';
 
-portal.use(bodyParser.urlencoded({ extended: false }));
+portal.use(bodyParser.json());
 
 portal.set('port', (process.env.PORT || 3000));
 
